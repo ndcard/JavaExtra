@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuejs入门</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}<hr>
+        {{num+1}}<hr/>
+        <!--Vue.js 都提供了完全的 JavaScript 表达式支持。
+        有个限制就是，每个绑定都只能包含单个表达式，所以下面的例子都不会生效。
+        -->
+        {{num==1?'true':'false'}}
+        <!--{{var a=1}}-->
+    </div>
+    <script type="text/javascript">
+        new Vue({
+            el:'#app',  //表示当前vue对象接管了div区域
+            data:{
+                message:'hello vuejs', //注意不要写分号结尾
+                num:1,
+            }
+        });
+    </script>
+</body>
+</html>

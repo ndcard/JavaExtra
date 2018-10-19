@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day89-hibernate/day89-hibernate.iml" filepath="$PROJECT_DIR$/day89-hibernate/day89-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day90-springDataJPA/day90-springDataJPA.iml" filepath="$PROJECT_DIR$/day90-springDataJPA/day90-springDataJPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day91-ManyToMany/day91-ManyToMany.iml" filepath="$PROJECT_DIR$/day91-ManyToMany/day91-ManyToMany.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day91-OneToMany/day91-OneToMany.iml" filepath="$PROJECT_DIR$/day91-OneToMany/day91-OneToMany.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day91-specifications/day91-specifications.iml" filepath="$PROJECT_DIR$/day91-specifications/day91-specifications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day92-axios/day92-axios.iml" filepath="$PROJECT_DIR$/day92-axios/day92-axios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day92-vuejs/day92-vuejs.iml" filepath="$PROJECT_DIR$/day92-vuejs/day92-vuejs.iml" />
+    </modules>
+  </component>
+</project>

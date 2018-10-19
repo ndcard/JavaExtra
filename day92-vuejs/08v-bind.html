@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-text与v-html</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<!--插值语法不能作用在 HTML 特性上，遇到这种情况应该使用 v-bind指令;-->
+<!-- view
+    插入值表达式：使用两个花括号{{}}来把Model套起来，就能显示对象的值
+    v-on:   可以使用   @  替代
+    v-bind:  可以使用  :  代替
+-->
+<body>
+    <div id="app">
+        <font size="5" v-bind:color="color1" @mouseover="fun1" @mouseout="fun2">传智播客</font>
+        <font :color="color2">传智播客</font><br/>
+        <a :href="url1">点击链接</a>
+        <a :href="url2+'?id='+id">点击链接</a>
+    </div>
+    <script>
+        new Vue({
+           el:'#app',
+           data: {
+               color1: 'green',
+               color2: 'yellow',
+               url1: 'http://www.baidu.com',
+               url2: 'http://www.itheima.com',
+               id: 1000,
+           },
+            methods:{
+               fun1:function () {
+                   this.color1='red';
+               },
+                fun2:function () {
+                    this.color1='green';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model绑定变量</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        姓名:<input type="text"  v-model="username"><br/>
+        密码:<input type="text"  v-model="password"><br/>
+        <input type="button" @click="fun1" value="获取">
+    </div>
+    <script>
+        new Vue({
+           el:'#app',
+            data:{
+                username:'张三',
+                password:'123',
+
+            },
+           methods:{
+               fun1:function () {
+                    alert(this.username+':'+this.password);
+                    this.username='李四';
+                    this.password='456';
+               },
+
+           }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //get请求的2种写法   参数直接写在url上面'/user?id=12345'
+        axios.get('/user?id=12345').then(function (response) {
+            console.log(response);
+        }).catch(function (err) {
+            console.log(err);
+        });
+
+        //参数:{params:{id:123}}
+        axios.get('/user',{params:{id:123}}).then(function (response) {
+            console.log(response);
+        }).catch(function (err) {
+            console.log(err);
+        })
+
+        //参数:对象{name:'张三', age:18,}
+        axios.post('/user',{name:'张三', age:18,}).then(function (response) {
+            console.log(response);
+        }).catch(function (err) {
+            console.log(err);
+        });
+
+    </script>
+</body>
+</html>

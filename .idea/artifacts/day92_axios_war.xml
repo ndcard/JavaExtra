@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="day92-axios:war">
+    <output-path>$PROJECT_DIR$/day92-axios/target</output-path>
+    <root id="archive" name="vuejsDemo.war">
+      <element id="artifact" artifact-name="day92-axios:war exploded" />
+    </root>
+  </artifact>
+</component>

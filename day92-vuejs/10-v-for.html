@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for遍历数组</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(a,index) in arr">{{a+' '+index}}</li>
+        </ul>
+        <ol>
+            <!--值在前,键在后-->
+            <li v-for="(a,b) in product">{{a+' '+b}}</li>
+        </ol>
+        <ol>
+            <li v-for="(a,b) in products">{{'索引:'+b+'id:'+a.id+' 名称'+a.pname+' 价格'+a.price}}</li>
+        </ol>
+        <table border="1" cellspacing="0">
+            <tr>
+                <th>索引</th>
+                <th>id</th>
+                <th>pname</th>
+                <th>price</th>
+            </tr>
+            <tr v-for="(a,b) in products">
+                <td>{{b+1}}</td>
+                <td>{{a.id}}</td>
+                <td>{{a.pname}}</td>
+                <td>{{a.price}}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        new Vue({
+           el:'#app',
+            data:{
+                arr:['a','b','c','d'],
+                product : {
+                    id : 1,
+                    pname : "电视机",
+                    price : 6000
+                },
+                products : [ {
+                    id : 1,
+                    pname : "电视机",
+                    price : 6000
+                }, {
+                    id : 2,
+                    pname : "电冰箱",
+                    price : 8000
+                }, {
+                    id : 3,
+                    pname : "电风扇",
+                    price : 600
+                } ],
+            },
+           methods:{
+           }
+        });
+    </script>
+</body>
+</html>
+<!--
+a 0
+b 1
+c 2
+d 3
+
+1 id
+电视机 pname
+6000 price
+-->

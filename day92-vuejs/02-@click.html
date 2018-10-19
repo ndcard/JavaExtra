@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理 v-on</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <!--<button v-on:click="fun1('good')">点击改变message</button>-->
+        <button @click="fun('good')">点击改变message</button>
+    </div>
+    <script>
+        new Vue({
+           el:'#app',       //#id:选择器
+           data:{
+               message:'helloworld',
+           },
+           methods:{
+               fun:function (s) {
+                   this.message=s;  //这里必须加this
+               }
+           }
+        });
+    </script>
+</body>
+</html>

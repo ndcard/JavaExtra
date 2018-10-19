@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理 v-on</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-on:keydown="fun2($event)">
+    </div>
+    <script>
+        new Vue({
+           el:'#app',       //#id:选择器
+           data:{
+
+           },
+           methods:{
+               //按下键盘退出输入字符 0:48 9:57 A:65 Z:90 a:97 z:122
+               fun1:function (event) {
+                   alert(event.keyCode);
+               },
+               //需求：文本框中只能输入字母，不能输入数字
+               fun2:function (event) {
+                    if(event.keyCode<57||event.keyCode>90){
+                        event.preventDefault();//阻止事件的默认行为
+                    }
+               }
+           }
+        });
+    </script>
+</body>
+</html>

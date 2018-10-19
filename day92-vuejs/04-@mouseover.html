@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理 v-on</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--没有参数的函数可以不带括号-->
+        <div style="background-color: green" @mouseover="fun1()" id="div">
+            <textarea rows="4" cols="20" @mouseover="fun2($event)">文本域</textarea>
+        </div>
+    </div>
+    <script>
+        new Vue({
+           el:'#app',       //#id:选择器
+           data:{
+
+           },
+           methods:{
+               //按下键盘退出输入字符 0:48 9:57 A:65 Z:90 a:97 z:122
+               fun1:function () {
+                    alert("div");
+               },
+               fun2:function (event) {
+                   alert("文本域");
+                   //阻止事件传播,冒泡
+                   event.stopPropagation();
+               },
+           }
+        });
+    </script>
+</body>
+</html>

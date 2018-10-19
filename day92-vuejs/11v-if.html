@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-text与v-html</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-if="flag">aaa</div>
+        <div v-show="flag">bbb</div>
+        <button @click="fun">切换</button>
+    </div>
+    <script>
+        new Vue({
+           el:'#app',
+           data:{
+             flag:true,
+           },
+            methods:{
+               fun:function () {
+                   this.flag=!this.flag;
+               }
+            }
+        });
+    </script>
+</body>
+</html>
